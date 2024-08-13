@@ -1,0 +1,92 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #fff;
+}
+
+.roulette-game {
+  text-align: center;
+  background-color: #222;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #FFD700;
+}
+
+.balance-bet {
+  margin-bottom: 20px;
+}
+
+input[type="number"] {
+  width: 80px;
+  text-align: center;
+}
+
+.roulette-wheel {
+  margin-bottom: 20px;
+}
+
+.wheel {
+  width: 200px;
+  height: 200px;
+  border: 10px solid #FFD700;
+  border-radius: 50%;
+  background-color: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #fff;
+  position: relative;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#result-message {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+.game-history {
+  margin-top: 20px;
+  color: #fff;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+.game-history h2 {
+  margin-bottom: 10px;
+  color: #FFD700;
+}
+
+#history-list {
+  list-style: none;
+  padding: 0;
+}
