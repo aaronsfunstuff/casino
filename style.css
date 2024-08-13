@@ -165,3 +165,60 @@ footer {
 footer p {
   margin: 0;
 }
+.contact {
+  padding: 50px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.contact h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #004d40;
+}
+
+.contact p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.contact label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.contact button {
+  display: block;
+  width: 100%;
+  background-color: #004d40;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: #003d33;
+}
