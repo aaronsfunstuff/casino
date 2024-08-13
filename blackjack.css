@@ -1,22 +1,32 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #2b2b2b;
-  color: white;
-  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #0b3d91;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   margin: 0;
-  padding: 20px;
 }
 
 .blackjack-game {
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: #4caf50;
-  padding: 20px;
+  text-align: center;
+  background-color: #1c1c1c;
   border-radius: 10px;
+  padding: 20px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
+  color: #ffd700;
+  font-size: 2em;
   margin-bottom: 20px;
+}
+
+h2 {
+  color: #fff;
+  margin-bottom: 10px;
 }
 
 .blackjack-table {
@@ -25,29 +35,74 @@ h1 {
   margin-bottom: 20px;
 }
 
-.dealer, .player {
-  width: 45%;
-}
-
-#dealer-cards, #player-cards {
+.card-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  align-items: center;
+  margin-top: 10px;
 }
 
-.controls {
+.card-container img {
+  width: 60px;
+  height: auto;
+  margin: 0 5px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#player-score, #dealer-score {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.controls button {
+  background-color: #ffd700;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px 5px;
+  transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: #e6b800;
+}
+
+.betting {
   margin-top: 20px;
 }
 
-button {
-  padding: 10px 20px;
-  margin: 5px;
-  font-size: 16px;
+#bet-amount {
+  width: 60px;
+  margin-right: 10px;
+}
+
+#chips-amount {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #ffd700;
+}
+
+button#place-bet-btn {
+  background-color: #ffd700;
+  color: #000;
+  font-weight: bold;
   cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button#place-bet-btn:hover {
+  background-color: #e6b800;
 }
 
 #result-message {
-  font-size: 18px;
   margin-top: 20px;
-  font-weight: bold;
+  font-size: 1.2em;
 }
