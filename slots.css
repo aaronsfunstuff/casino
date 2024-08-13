@@ -22,6 +22,15 @@ h1 {
   color: #FFD700;
 }
 
+.balance-bet {
+  margin-bottom: 20px;
+}
+
+input[type="number"] {
+  width: 80px;
+  text-align: center;
+}
+
 .slot-machine {
   display: flex;
   justify-content: center;
@@ -39,11 +48,14 @@ h1 {
   align-items: center;
   font-size: 2em;
   color: #fff;
+  background-image: url('images/slot-symbols.png');
+  background-size: cover;
+  background-position: center;
   transition: transform 0.3s ease-in-out;
 }
 
 .slot.spin {
-  animation: spin 0.5s ease-in-out;
+  animation: spin 1s ease-in-out;
 }
 
 @keyframes spin {
@@ -72,3 +84,19 @@ button:hover {
   font-size: 1.2em;
 }
 
+.payout-table, .game-history {
+  margin-top: 20px;
+  color: #fff;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+.payout-table h2, .game-history h2 {
+  margin-bottom: 10px;
+  color: #FFD700;
+}
+
+#history-list {
+  list-style: none;
+  padding: 0;
+}
