@@ -1,4 +1,4 @@
-let deck, playerHand, dealerHand, playerScore, dealerScore;
+let deck, playerHand, dealerHand, playerScore, dealerScore, chips = 100, betAmount = 10;
 
 function createDeck() {
     const suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
@@ -37,7 +37,8 @@ function calculateHandScore(hand) {
 function dealCard(hand, elementId) {
     const card = deck.pop();
     hand.push(card);
-    document.getElementById(elementId).innerHTML += `<div class="card">${card.value} of ${card.suit}</div>`;
+    const cardImage = `<img src="images/${card.value}_of_${card.suit.toLowerCase()}.png" alt="${card.value} of ${card.suit}" class="card">`;
+    document.getElementById(elementId).innerHTML += cardImage;
 }
 
 function startGame() {
@@ -54,6 +55,7 @@ function startGame() {
     dealCard(dealerHand, 'dealer-cards');
 
     updateScores();
+    updateChips();
 }
 
 function updateScores() {
@@ -65,9 +67,11 @@ function updateScores() {
 
     if (playerScore === 21) {
         document.getElementById('result-message').textContent = 'Blackjack! You win!';
+        winBet();
         disableButtons();
     } else if (playerScore > 21) {
         document.getElementById('result-message').textContent = 'Bust! You lose!';
+        loseBet();
         disableButtons();
     }
 }
@@ -87,14 +91,31 @@ function stand() {
 
     if (dealerScore > 21) {
         document.getElementById('result-message').textContent = 'Dealer busts! You win!';
+        winBet();
     } else if (dealerScore > playerScore) {
         document.getElementById('result-message').textContent = 'Dealer wins!';
+        loseBet();
     } else if (dealerScore < playerScore) {
         document.getElementById('result-message').textContent = 'You win!';
+        winBet();
     } else {
         document.getElementById('result-message').textContent = 'It\'s a tie!';
     }
     disableButtons();
+}
+
+function winBet() {
+    chips += betAmount;
+    updateChips();
+}
+
+function loseBet() {
+    chips -= betAmount;
+    updateChips();
+}
+
+function updateChips() {
+    document.getElementById('chips-amount').textContent = `Chips: ${chips}`;
 }
 
 function disableButtons() {
@@ -113,5 +134,10 @@ document.getElementById('restart-btn').addEventListener('click', () => {
     enableButtons();
     startGame();
 });
+document.getElementById('place-bet-btn').addEventListener('click', () => {
+    betAmount = parseInt(document.getElementById('bet-amount').value);
+    startGame();
+});
 
 startGame();
+
