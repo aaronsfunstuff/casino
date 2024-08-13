@@ -9,6 +9,10 @@
 <body>
     <div class="slots-game">
         <h1>Slots Game</h1>
+        <div class="balance-bet">
+            <p>Chips: <span id="chip-balance">100</span></p>
+            <p>Bet Amount: <input type="number" id="bet-amount" value="10" min="1" max="100"></p>
+        </div>
         <div class="slot-machine">
             <div id="slot1" class="slot"></div>
             <div id="slot2" class="slot"></div>
@@ -19,10 +23,21 @@
             <button id="reset-btn">Reset</button>
         </div>
         <p id="result-message"></p>
+        <div class="payout-table">
+            <h2>Payout Table</h2>
+            <p>3 of a Kind: 2x Bet</p>
+            <p>2 of a Kind: 1x Bet</p>
+        </div>
+        <div class="game-history">
+            <h2>Game History</h2>
+            <ul id="history-list"></ul>
+        </div>
+        <div class="bonus-round" id="bonus-round">
+            <h2>Bonus Round!</h2>
+            <p>Pick a symbol for a prize!</p>
+            <p id="bonus-message"></p>
+        </div>
     </div>
-    <audio id="spin-sound" src="sounds/spin.mp3"></audio>
-    <audio id="win-sound" src="sounds/win.mp3"></audio>
-    <audio id="lose-sound" src="sounds/lose.mp3"></audio>
     <script src="slots.js"></script>
 </body>
 </html>
